@@ -10,4 +10,4 @@ Formally:
 
 > P(x<sub>t</sub>​∣x<sub>t−1</sub>​)
 
-The model is built using simple frequency counting and normalization, without any machine learning libraries.
+The model is built using simple frequency counting and normalization, without any machine learning libraries. 

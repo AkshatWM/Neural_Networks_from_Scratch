@@ -4,4 +4,4 @@ A from-scratch exploration of language models, starting with simple n-grams and 
 ## Recent Works-
 * XOR Gate NN
 * Bigram (Count based)
-* Char. Level MLP
+* MLP

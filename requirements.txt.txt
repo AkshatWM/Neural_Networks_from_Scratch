@@ -1,0 +1,5 @@
+numpy
+torch
+regex
+matplotlib
+plotly

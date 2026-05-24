@@ -1,9 +1,13 @@
 #importing libraries
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 #Loading the dataset
-with open('names.txt','r') as f:
+script_dir = Path(__file__).resolve().parent
+project_root = script_dir.parent.parent
+file_path = project_root / "datasets" / "names.txt"
+with open(file_path,'r') as f:
     words = f.read().split()
 
 #Integer to Character mapping and the opposite 
@@ -21,14 +25,17 @@ for w in words:
         target = word[n+i-1]
         count[(context,target)] = count.get((context,target), 0) + 1
 
+#Calculating vocab size
 vocab_size = len(stoi)
 N = np.zeros((vocab_size, vocab_size))
 
+#Counting what character follows other character
 for i,j in count.items():
     row = stoi[i[0][0]]
     col = stoi[i[1]]
     N[row,col] += j
 
+#Smoothing the data
 N = N + 1
 P = N/ N.sum(axis=1, keepdims=True) 
 

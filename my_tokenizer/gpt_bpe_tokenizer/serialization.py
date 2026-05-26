@@ -57,13 +57,13 @@ def load_tokenizer(tokenizer_cls, model_file):
     tokenizer = tokenizer_cls()
 
     merges = {}
-
+    
     with open(model_file, "r", encoding="utf-8") as f:
 
         # version
         version = f.readline().strip()
 
-        if version != "minbpe v1":
+        if version != "bpe v1":
             raise ValueError("Unknown tokenizer version")
 
         # regex pattern

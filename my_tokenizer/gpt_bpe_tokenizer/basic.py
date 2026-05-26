@@ -1,5 +1,5 @@
 #byte-level BPE tokenizer
-from base import Tokenizer, get_stats, merge
+from .base import Tokenizer, get_stats, merge
 
 class BasicTokenizer(Tokenizer):
 

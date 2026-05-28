@@ -5,3 +5,6 @@ A from-scratch exploration of language models, starting with simple n-grams and 
 * XOR Gate NN
 * Bigram (Count based)
 * MLP
+* BPE tokenizer
+* RNN
+* LSTM
